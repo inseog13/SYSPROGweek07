@@ -1,3 +1,4 @@
+```c
 /*
  * 4_fifo_write.c — FIFO 로 메시지를 보낸다  [나중에 실행할 쪽]
  *
@@ -19,7 +20,7 @@
 
 int main(int argc, char *argv[])
 {
-    const char *msg = (argc == 2) ? argv[1] : "기본 메시지";   /* 인자가 있으면 그걸, 없으면 기본값 */
+    const char *msg = (argc == 2) ? argv[1] : "기본 메시지";
 
     /* 받는 쪽이 먼저 실행되어 있어야 한다. 없으면 open 이 기다린다. */
     int fd = open(FIFO_PATH, O_WRONLY);
@@ -28,7 +29,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    if (write(fd, msg, strlen(msg)) == -1) {   /* 널 종료 문자는 보내지 않는다 */
+    if (write(fd, msg, strlen(msg)) == -1) {
         perror("write");
         close(fd);
         return 1;
@@ -38,3 +39,4 @@ int main(int argc, char *argv[])
     close(fd);
     return 0;
 }
+```
