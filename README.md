@@ -68,6 +68,7 @@ if (n > 0) {
 기존 부모 코드에는 전송 후 자식의 종료를 기다리는 부분만 있었지만, 이제는 자식의 응답을 읽는 부분이 추가됐습니다.
 
 ## 실행 결과
+<img width="756" height="137" alt="image" src="https://github.com/user-attachments/assets/b7874bcf-05b1-46d6-9525-83328053771c" />
 
 
 ## 2_pipe_dup2
