@@ -285,6 +285,7 @@ return 0;
 FIFO는 파일 시스템에 이름이 남는 특성이 있으므로 사용이 끝난 뒤 삭제하는 작업이 필요합니다. 이 과제에서는 받는 프로그램이 메시지를 읽은 뒤 FIFO를 삭제하도록 구성했습니다.
 
 ## 실행 결과
+<img width="508" height="282" alt="image" src="https://github.com/user-attachments/assets/faa14ac5-5fa3-435a-96db-0790081cf318" />
 
 
 
