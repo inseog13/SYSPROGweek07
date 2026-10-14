@@ -41,7 +41,7 @@ close(fd2[0]);
 자식은 fd에서 읽고 fd2에 쓰므로 반대쪽 끝은 필요하지 않습니다.
 
 
-4. 실행 인자를 받도록 수정
+4. 문자열을 대문자로 변환
 ```
 for (int i = 0; i < n; i++) {
     buf[i] = (char)toupper((unsigned char)buf[i]);
