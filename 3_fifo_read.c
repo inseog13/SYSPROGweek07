@@ -2,8 +2,7 @@
  * 3_fifo_read.c — FIFO(이름 있는 파이프)로 메시지를 받는다  [먼저 실행할 쪽]
  *
  * [핵심 개념]
- *   파이프는 부모-자식처럼 관계있는 프로세스끼리만 쓸 수 있다.
- *   FIFO 는 파일 시스템에 이름을 가지므로 아무 관계 없는 두 프로그램도 통신할 수 있다.
+ *   FIFO 는 파일 시스템에 이름을 가지므로 관계없는 두 프로그램도 통신할 수 있다.
  *   open 은 상대가 반대쪽을 열어 줄 때까지 기다린다(블록).
  *   출처: man 3 mkfifo, man 7 fifo
  *
@@ -36,12 +35,17 @@ int main(void)
     char buf[128];
     /* 마지막 한 자리는 남겨 두어 뒤에 '\0'을 붙일 자리로 쓴다 */
     ssize_t n = read(fd, buf, sizeof buf - 1);
+
     if (n > 0) {
         buf[n] = '\0';
         printf("받은 메시지: %s\n", buf);
+    } else if (n == 0) {
+        printf("받은 메시지가 없습니다.\n");
+    } else {
+        perror("read");
     }
 
     close(fd);
-    unlink(FIFO_PATH);   /* 다 썼으면 FIFO 파일도 지운다 — 안 지우면 파일시스템에 계속 남는다 */
+    unlink(FIFO_PATH);   /* 다 썼으면 FIFO 파일도 지운다 */
     return 0;
 }
