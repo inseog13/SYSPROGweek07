@@ -169,6 +169,7 @@ execvp(cmd2[0], cmd2);
 이제 첫 번째 명령어의 출력이 파이프를 통해 두 번째 명령어의 입력으로 전달됩니다.
 
 ## 실행 결과
+<img width="642" height="162" alt="image" src="https://github.com/user-attachments/assets/de7daa75-b51f-42a9-98f3-72a5097fe2c9" />
 
 
 ## 3_fifo_read / 4_fifo_write FIFO로 메시지를 주고받는 프로그램
