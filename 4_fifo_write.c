@@ -1,4 +1,3 @@
-```c
 /*
  * 4_fifo_write.c — FIFO 로 메시지를 보낸다  [나중에 실행할 쪽]
  *
@@ -39,4 +38,3 @@ int main(int argc, char *argv[])
     close(fd);
     return 0;
 }
-```
